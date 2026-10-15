@@ -1,0 +1,11 @@
+# Find numbers with alternating odd and even digits using python programming language 
+
+numbers = [1234, 2468, 1357, 123, 5836, 1123]
+
+for num in numbers:
+    digits = str(num)
+
+    if all((int(digits[i]) % 2) != (int(digits[i + 1]) % 2)
+           for i in range(len(digits) - 1)):
+        print(num)
+        
